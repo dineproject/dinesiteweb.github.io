@@ -1,0 +1,226 @@
+
+/* -----------------------------------------------------------------------------------DEBUT----------------------------------------------------------------------  */
+
+/* Corps */
+@font-face {  /* Propriété 1: @font-face // A partir de google fonts, la police :'Overpass', sans-serif est téléchargée par le lien . */
+    font-family: 'Overpass', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Overpass:wght@200&display=swap');
+    }
+body{
+  background: #b2ad99;
+  margin: auto;
+  font-family:  'Overpass', sans-serif;
+}
+
+/* Le main */
+main{
+  margin: 1.5em 10em 1.5em 10em;
+  background: #b2ad9f;
+}
+
+/* menu header et menu footer et leurs contenus*/
+header, footer{
+  
+  font-weight: bold;
+  font-family: Bookman, URW Bookman L, serif;
+}
+footer nav, header nav {  
+    height: 100px;
+    background: #6b5b65;
+}
+header nav div .element:nth-child(1) {
+  font-size: 29px ;
+  font-family: Apple Chancery, cursive;
+  filter: drop-shadow(3px 4px 2px black); /* Propriété 4: filter: drop-shadow(décalage-x, décalage-y, rayon-flou, rayon-étalement, couleur)  */
+}
+footer nav div .element:nth-child(1){
+  font-size: 16.5px ;
+  font-family: Apple Chancery, cursive;
+  filter: drop-shadow(3px 4px 2px black);/* Propriété 4: filter: drop-shadow(décalage-x, décalage-y, rayon-flou, rayon-étalement, couleur)  */
+  
+}
+nav .menu , nav .pied_de_page {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+nav .menu .element , nav .pied_de_page .element {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-decoration: none;
+    color: white;
+}
+nav .pied_de_page .element{
+  filter: drop-shadow(3px 4px 2px black);
+}
+header nav a:hover {
+  background: #a2b6bc;
+}
+footer nav a:hover { 
+  transform: scale(1.5) /* animation translation, en grandissant le texte*/
+}
+/*sous menu déroulant dans la page présentation*/
+
+.sous_menu_clique{
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.sous_menu_contenu{
+  position: relative;
+  display: inline-block;
+}
+
+.sous_menu_contenu {
+  display: none;
+  position: absolute;
+  background-color: #6b5b75;
+  min-width: 160px; 
+  z-index: 1;      /* Propriété 5: z-index // pour que pas que les éléments fils, se supperposent les uns des autres sans pouvoir les lire ainsi avec cette propriété je passe les éléments vericalement */
+}
+
+.sous_menu_contenu a {
+  color: whitesmoke;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.sous_menu:hover .sous_menu_contenu {
+  display: block;
+}
+
+ /* Disposition des blocs à l'intérieur du body main*/
+main .section1{
+  display: grid;
+  column-gap: 50px; /*Propriété 3: column-gap //espace entre les colonnes par la mise en page grid */
+}
+main .section1 div {
+  grid-column: 1 / 2 ;
+}
+main .section1 article {
+   width: 555px;
+   height: 350px;
+   text-align: justify;
+   grid-column: 2 / 3 ;
+   font-size: 17px;
+   overflow: auto;
+   padding-right: 10px; 
+}
+main .section2 div{
+  float: right; 
+}
+main .section2 article{
+  font-size: 17px;
+  overflow: auto;
+  padding-right: 10px; 
+  width: 430px;
+  height: 350px;
+}
+main .section1{
+  margin-bottom: 30px;
+}
+/*    FRANCE  */
+.france {
+display: grid;
+  margin: auto;
+}
+.france div img{
+  grid-column: 1 / 2;
+  margin-left: 80px;
+  margin-right: 29px ;
+}
+.france .commentaire{
+  grid-column: 2 / 2 ;
+  width: 450px;
+  margin-left: 0;
+  margin-right: 80px;
+}
+/*    CANADA  */
+.canada div img{
+  float: right;
+  margin-left: 0;
+  margin-right: 80px;
+}
+.canada .commentaire{
+  width: 450px;
+  margin-left: 80px;
+  margin-right: 29px;
+}
+/*    USA  */
+.usa {
+display: grid;
+}
+.usa div img{
+  grid-column: 1 / 2;
+  margin-left: 80px;
+  margin-right: 29px ;
+}
+.usa .commentaire{
+  grid-column: 2 / 2 ;
+  width: 450px;
+  margin-left: 0;
+  margin-right: 80px;
+}
+
+#OFFRE{
+  margin-top: 25px;
+}
+/*   formatage des titres et asides*/
+h4{
+  border-bottom-color: #878f89;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+}
+aside{
+  opacity: 0.60;
+}
+/* traitement des liens */
+.lien{
+  text-decoration: none;
+}
+aside .lien{
+  background: #878f99;
+  border: 2px #878f99 groove;
+  border-radius: 20px;
+}
+
+
+/* Propriété 2: animation: ease-in-out // par la fonction animation-timing-function, on la définit avec les valeurs ci-dessous et a le mouvement de la coubre ease-in-out*/
+.animation{
+  background: #878f99;
+  font-size: 1.4em;
+  padding: 2px;
+  margin-top: 15px;
+  width: 24%;
+  font-weight: bold;
+  font-family: Apple Chancery, cursive;
+  position: relative;
+  animation: deplacement 5s infinite;
+  animation-timing-function: ease-in-out;
+  border: 1px blueviolet solid ;
+  border-radius: 10px;
+}
+@keyframes deplacement { /* séquence d'animation */
+  from{ left:0px;}
+  to{ left:76.5%;}
+}
+/*--------------------------------------------------FIN--------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+

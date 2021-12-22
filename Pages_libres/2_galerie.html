@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>GALERIE</title>
+    <link href="./Styles/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="./Scripts/galerie.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="menu">
+         <a class="element">GALERIE</a>
+         <a class="element" href="../accueil.html"> ACCUEIL </a>
+         <a class="element" href="../Page_imposée/livre_choisi/livre.html"> LIVRE </a>
+         <a class="element" href="./1_presentation.html"> PRESENTATION </a>
+         <a class="element"href="./3_connexion.html"> CONNEXION </a>
+      </div>
+  </nav>
+
+ </header>
+<main>
+  <h1>Vos études à l'étranger!</h1>
+    <p> <b id="id_quoi">Voyager pour Etudier !</b></p>
+    <p><img id="id_image" src="./Images/image_intro.jpg" height="350px"/></p>
+    <label>France : </label>
+    <input type="button" value="Tour Eiffel" onclick="changeImageM11()"
+    />
+    <input type="button" value="Université de Pau" onclick="changeImageM12()"
+    />
+    <br/>
+    <label>Canada: </label>
+    <input type="button" value="Mémorial de Vimy" onclick="changeImageM21()"
+    />
+    <input type="button" value="Université de Toronto" onclick="changeImageM22()"
+    />
+    <br/>
+    <label>Etats-Unis: </label>
+    <input type="button" value="Statue de Liberté" onclick="changeImageM31()"
+    />
+    <input type="button" value="Université de Harvard" onclick="changeImageM32()"
+    /><br/><br/>
+    <input type="button" value="Remise à l'état initial" onclick="changeImageM4()"
+    />
+    <br/>
+    <p>
+      <img src="./Images/image_intro.jpg" height="50px" onmouseover="changeImageM4()"
+      /><img src="./Images/image_france_monument.jpg" height="50px" onmouseover="changeImageM11()"
+      /><img src="./Images/image_france_univ.jpg" height="50px" onmouseover="changeImageM12()"
+      /><img src="./Images/image_canada_monument.jpg" height="50px" onmouseover="changeImageM21()"
+      /><img src="./Images/image_canada_univ.jpg" height="50px" onmouseover="changeImageM22()"
+      /><img src="./Images/image_usa_monument.jpg" height="50px" onmouseover="changeImageM31()"
+      /><img src="./Images/image_usa_univ.jpg" height="50px" onmouseover="changeImageM32()"
+      />
+    </p>
+    <p></p>
+    <p> 
+      <button  type="button" onclick="changeCouleur()">Cliquer sur le bouton droit de la souris pour colorer le fond avec une couleur aléatoire</button>
+  </p> 
+  <br/><br/>
+  <div class="animation"> Contact, ci-bas ! A bienôt.</div>
+</main>
+  <footer>
+    <nav>
+      <div class="pied_de_page">
+          <a class="element">© DINE'S COMPANY 2021</a>
+         <a class="element" href="https://www.google.com/maps/search/R%C3%A9sidence+Crous+Cl%C3%A9+des+Champs/@43.3186013,-0.3668844,17z/data=!3m1!4b1"><img src="Images/map.png"  width="50" height="35" /></a>
+         <a class="element" href="#"><img src="Images/facebook.png" width="30" height="30" /></a>
+         <a class="element" href="#"><img src="Images/twitter.webp" width="30" height="30" /></a>
+         <a class="element" href="https://www.likedin.com/in/souaibou-dine-barry-473869214"><img src="Images/likedin.webp" width="90" height="30" /></a>
+         
+      </div>
+  </nav>
+    </footer>
+ </body>
+
+  <script>
+  var bodyTag = document.body;
+  var p1Tag   = bodyTag.childNodes[3];
+  var bTag    = p1Tag.lastChild;
+  var p2Tag   = bodyTag.childNodes[5];
+  var imgTag  = p2Tag.firstChild;
+
+  console.log("p1Tag  : "+ p1Tag.innerHTML);
+  console.log("bTag   : "+ bTag.innerHTML);
+  console.log("imgTag : "+ imgTag.src);
+  </script>
+
+</html>
